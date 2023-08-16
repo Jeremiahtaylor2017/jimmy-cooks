@@ -2,6 +2,11 @@ import React from 'react'
 import styles from './page.module.css';
 import Link from 'next/link';
 
+export const metadata = {
+  title: "Jimmy Cooks Portfolio",
+  description: "Our Works"
+}
+
 const Portfolio = () => {
   return (
     <div className={styles.container}>
@@ -13,8 +18,8 @@ const Portfolio = () => {
         <Link href="/portfolio/websites" className={styles.item}>
           <span className={styles.title}>Websites</span>
         </Link>
-        <Link href="/portfolio/application" className={styles.item}>
-          <span className={styles.title}>Application</span>
+        <Link href="/portfolio/applications" className={styles.item}>
+          <span className={styles.title}>Applications</span>
         </Link>
       </div>
     </div>
