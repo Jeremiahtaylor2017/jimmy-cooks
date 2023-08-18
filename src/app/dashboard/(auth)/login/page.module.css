@@ -6,6 +6,16 @@
     justify-content: center;
 }
 
+.title {
+    color: #bbb;
+}
+
+.subtitle{
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: #bbb;
+}
+
 .form {
     width: 300px;
     display: flex;
@@ -32,4 +42,12 @@
     border-radius: 5px;
     color: #eee;
     font-weight: bold;
+}
+
+.google {
+  background-color: rgba(228, 97, 50, 0.72);
+}
+
+.or {
+    color: #bbb;
 }
