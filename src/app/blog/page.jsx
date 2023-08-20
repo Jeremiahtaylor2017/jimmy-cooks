@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic';
+
 import React from 'react'
 import styles from './page.module.css';
 import Link from 'next/link';
@@ -6,7 +8,7 @@ import Image from 'next/image';
 async function getData() {
   try {
 
-    const res = await fetch(`${process.env.API_URL}/api/posts`, {
+    const res = await fetch("http://localhost:3000/api/posts", {
       cache: 'no-store'
     });
 
@@ -20,10 +22,10 @@ async function getData() {
 
 }
 
-// export const metadata = {
-//   title: "Jimmy Cooks Blog",
-//   description: "Jimmy Cooks Blog"
-// }
+export const metadata = {
+  title: "Jimmy Cooks Blog",
+  description: "Jimmy Cooks Blog"
+}
 
 const Blog = async () => {
   const data = await getData();
