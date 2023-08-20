@@ -4,15 +4,20 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 async function getData() {
-  const res = await fetch(`${process.env.API_URL}/api/posts`, {
-    cache: 'no-store'
-  });
+  try {
 
-  if (!res.ok) {
-    throw new Error('Failed to fetch data');
+    const res = await fetch(`${process.env.API_URL}/api/posts`, {
+      cache: 'no-store'
+    });
+
+    if (!res.ok) {
+      throw new Error('Failed to fetch data');
+    }
+    return res.json();
+  } catch (err) {
+    console.log(err);
   }
 
-  return res.json();
 }
 
 // export const metadata = {
